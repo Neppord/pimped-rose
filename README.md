@@ -41,6 +41,10 @@ T = TypeVar('T')
 FunctorType = TypeVar('FunctorType', bound='Functor')
 
 class Functor:
+    """
+    >>> functor.map(str)
+    '42'
+    """
     def map(self: FunctorType[F], f: Callable[[F], T]) -> FunctorType[T]:
         pass
 ```
