@@ -1,4 +1,4 @@
-#The Pimped Rose
+# The Pimped Rose
 
 In this kata you are learning ways to extend a system with changing the existing
 code as little as posible. The technique we will focus on is called Embellish and
