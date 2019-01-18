@@ -72,6 +72,7 @@ AppType = TypeVar('AppType', bound='Applicative')
 class Applicative:
     """
     >>> applicative.ap("Hello").ap("World")
+    'Hello World'
     """
     def ap(self: AppType[Callable[[F],T]], from: AppType[F]) -> AppType[T]:
         pass
