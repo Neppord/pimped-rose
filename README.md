@@ -29,4 +29,4 @@ taken from the database. There is no grantees that one report will finnish
 before the next database request will start, so you can't solve the issue just by
 adding a local member to the event handler instance.
 
-[Embellising]: Embellishing.md
+[Embellising](Embellishing.md)
