@@ -1,4 +1,5 @@
 from event import EventHandler
+from gildedrose import update_quality
 from item import Item
 from report import Report
 
@@ -11,7 +12,7 @@ class MainEventHandler(EventHandler):
         return items
 
     def on_update(self, items):
-        return items
+        return update_quality(items)
 
     def on_report(self, items):
         return str(Report(items))
