@@ -10,7 +10,7 @@ is part of the Embellish technique
 
 The codebase have multiple source files with code you are not allowed to change.
 You may create as many source files you like, but don't replace functionality 
-that already exists. You are allowed to change the main.py file and write tests
+that already exists. You are allowed to change the main file and write tests
 for it if you like.
 
 # Welcome to The pimped rose
@@ -29,4 +29,5 @@ taken from the database. There is no grantees that one report will finnish
 before the next database request will start, so you can't solve the issue just by
 adding a local member to the event handler instance.
 
-[Embellising](Embellishing.md)
+
+For more instructions look at the Embellishing.md in each language folder.
