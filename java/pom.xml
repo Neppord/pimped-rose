@@ -7,6 +7,11 @@
     <groupId>com.ytterbrink</groupId>
     <artifactId>pimped-rose</artifactId>
     <version>0.0.0</version>
-
-
+    <dependencies>
+        <dependency>
+            <groupId>io.projectreactor</groupId>
+            <artifactId>reactor-core</artifactId>
+            <version>3.2.8.RELEASE</version>
+        </dependency>
+    </dependencies>
 </project>
