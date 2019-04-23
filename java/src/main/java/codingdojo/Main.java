@@ -17,19 +17,19 @@ public class Main {
             .subscribe(Main::writeReport);
     }
 
-    private static Item[] handleDatabaseResult(DatabaseResult r) {
+    private static List<Item> handleDatabaseResult(DatabaseResult r) {
         return r.result.stream()
             .map(i -> new Item(
                 i.name,
                 Integer.valueOf(i.sellIn),
                 Integer.valueOf(i.quality)
-            )).collect(Collectors.toList()).toArray(new Item[]{});
+            )).collect(Collectors.toList());
     }
 
-    private static List<Item> updateItems(Item[] items) {
-        GildedRose gildedRose = new GildedRose(items);
+    private static List<Item> updateItems(List<Item> items) {
+        GildedRose gildedRose = new GildedRose(items.toArray(new Item[]{}));
         gildedRose.updateQuality();
-        return Arrays.asList(items);
+        return items;
     }
 
     private static void writeReport(Report report) {
