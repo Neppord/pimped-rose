@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace PimpedRose
 {
 
-    public class Program
+    public static class Program
     {
         public static async Task<int> Main()
         {
