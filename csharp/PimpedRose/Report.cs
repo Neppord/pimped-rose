@@ -7,12 +7,12 @@ namespace PimpedRose
 
     public class Report
     {
-        List<Item> items;
-        PricingRegistry pricingRegistry = new PricingRegistry();
+        List<Item> _items;
+        PricingRegistry _pricingRegistry = new PricingRegistry();
 
         public Report(List<Item> items)
         {
-            this.items = items;
+            this._items = items;
         }
 
 
@@ -27,12 +27,12 @@ namespace PimpedRose
                 "sell in",
                 "price"
             );
-            var table = items.Select(i=>string.Format(
+            var table = _items.Select(i=>string.Format(
                     format,
                     i.Name,
                     i.Quality,
                     i.SellIn,
-                    pricingRegistry.getPrice(i)
+                    _pricingRegistry.GetPrice(i)
                 ));
             return header + "\n" + string.Join("\n", table);
         }
