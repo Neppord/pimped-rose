@@ -6,7 +6,7 @@ namespace PimpedRose
     {
         public double getPrice(Item i)
         {
-            return new Random().Next() * 100.0;
+            return new Random().NextDouble() * 100.0;
         }
     }
 
