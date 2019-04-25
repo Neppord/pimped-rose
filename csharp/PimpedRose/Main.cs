@@ -10,7 +10,7 @@ namespace PimpedRose
 
     public class Program
     {
-        public async Task<int> Main(string[] args)
+        public static async Task<int> Main(string[] args)
         {
             (await Database.GetItems())
                 .Select(HandleDatabaseResult)
