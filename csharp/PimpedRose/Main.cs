@@ -45,7 +45,7 @@ namespace PimpedRose
                 const string filename = "report.txt";
                 using (var outputFile = new StreamWriter(Path.Combine(Directory.GetCurrentDirectory(), filename)))
                 {
-                    outputFile.Write(report.toString());
+                    outputFile.Write(report.ToString());
                 }
             }
             catch (IOException e)

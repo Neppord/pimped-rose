@@ -16,10 +16,10 @@ namespace PimpedRose
         }
 
 
-        public string toString()
+        public override string ToString()
         {
-            var headerFormat = "%-20s %10s %10s %10s";
-            var format = "%-20s %10s %10s %10.2f";
+            var headerFormat = "{0,-20} {1,10} {2,10} {3,10}";
+            var format = "{0,-20} {1,10} {2,10} {3,10:C}";
             var header = string.Format(
                 headerFormat,
                 "name",
