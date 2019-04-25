@@ -16,7 +16,7 @@ namespace PimpedRose
         }
 
 
-        public String toString()
+        public string toString()
         {
             var headerFormat = "%-20s %10s %10s %10s";
             var format = "%-20s %10s %10s %10.2f";
