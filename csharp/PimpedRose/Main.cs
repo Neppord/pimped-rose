@@ -2,23 +2,21 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
+using System.Reactive.Linq;
 
 namespace PimpedRose
 {
 
     public static class Program
     {
-        public static async Task<int> Main()
+        public static void Main()
         {
-            (await Database.GetItems())
+            var items = Database.GetItems();
+            items
                 .Select(HandleDatabaseResult)
                 .Select(UpdateItems)
                 .Select(x => new Report(x))
-                .ToList()
-                .ForEach(WriteReport);
-
-            return 0;
+                .Subscribe(WriteReport);
         }
 
         private static List<Item> HandleDatabaseResult(DatabaseResult r)

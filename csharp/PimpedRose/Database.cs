@@ -1,14 +1,13 @@
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
-using PimpedRose;
+using System.Reactive.Linq;
 
 namespace PimpedRose
 {
 
     public class Database
     {
-        public static async Task<List<DatabaseResult>> GetItems()
+        public static IObservable<DatabaseResult> GetItems()
         {
             var result = new DatabaseResult(
                 new DateTime(),
@@ -19,8 +18,7 @@ namespace PimpedRose
 
                 }
             );
-            await Task.Delay(100);
-            return new List<DatabaseResult>{result};
+            return Observable.Return(result);
         }
     }
 

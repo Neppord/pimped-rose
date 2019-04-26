@@ -6,4 +6,8 @@
     <LangVersion>7.1</LangVersion>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Reactive.Linq" Version="4.1.5" />
+  </ItemGroup>
+
 </Project>
