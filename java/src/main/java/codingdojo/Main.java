@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -12,8 +11,8 @@ public class Main {
     public static void main(String[] argv) {
         Database.getItems()
             .map(Main::handleDatabaseResult)
-            .map(Main::updateItems)
-            .map(Report::new)
+            .map(GildedRose::updateItems)
+            .map(Report::createReport)
             .subscribe(Main::writeReport);
     }
 
@@ -24,12 +23,6 @@ public class Main {
                 Integer.valueOf(i.sellIn),
                 Integer.valueOf(i.quality)
             )).collect(Collectors.toList());
-    }
-
-    private static List<Item> updateItems(List<Item> items) {
-        GildedRose gildedRose = new GildedRose(items.toArray(new Item[]{}));
-        gildedRose.updateQuality();
-        return items;
     }
 
     private static void writeReport(Report report) {

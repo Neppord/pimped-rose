@@ -23,11 +23,19 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
+import java.util.List;
+
 class GildedRose {
     Item[] items;
 
     public GildedRose(Item[] items) {
         this.items = items;
+    }
+
+    static List<Item> updateItems(List<Item> items) {
+        GildedRose gildedRose = new GildedRose(items.toArray(new Item[]{}));
+        gildedRose.updateQuality();
+        return items;
     }
 
     public void updateQuality() {

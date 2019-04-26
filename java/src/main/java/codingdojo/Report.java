@@ -7,8 +7,12 @@ public class Report {
     final List<Item> items;
     final PricingRegistry pricingRegistry = new PricingRegistry();
 
-    public Report(List<Item> items) {
+    private Report(List<Item> items) {
         this.items = items;
+    }
+
+    public static Report createReport(List<Item> items) {
+        return new Report(items);
     }
 
     @Override
