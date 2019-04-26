@@ -4,10 +4,13 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class Main {
+    static SimpleDateFormat simpleDateFormatter =
+        new SimpleDateFormat("yyyy-MM-dd_hh-mm-ss");
     public static void main(String[] argv) {
         Database.getItems()
             .map(Main::handleDatabaseResult)
