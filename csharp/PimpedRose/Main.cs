@@ -11,11 +11,10 @@ namespace PimpedRose
     {
         public static void Main()
         {
-            var items = Database.GetItems();
-            items
+            Database.GetItems()
                 .Select(HandleDatabaseResult)
-                .Select(UpdateItems)
-                .Select(x => new Report(x))
+                .Select(GildedRose.UpdateItems)
+                .Select(Report.createReport)
                 .Subscribe(WriteReport);
         }
 
@@ -27,13 +26,6 @@ namespace PimpedRose
                 SellIn = Convert.ToInt32(i.SellIn),
                 Quality = Convert.ToInt32(i.Quality)
             }).ToList();
-        }
-
-        private static List<Item> UpdateItems(List<Item> items)
-        {
-            GildedRose gildedRose = new GildedRose(items);
-            gildedRose.UpdateQuality();
-            return items;
         }
 
         private static void WriteReport(Report report)

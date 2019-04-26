@@ -108,5 +108,12 @@ namespace PimpedRose
                 }
             }
         }
+
+        public static List<Item> UpdateItems(List<Item> items)
+        {
+            GildedRose gildedRose = new GildedRose(items);
+            gildedRose.UpdateQuality();
+            return items;
+        }
     }
 }
