@@ -33,7 +33,8 @@ namespace PimpedRose
             try
             {
                 const string filename = "report.txt";
-                using (var outputFile = new StreamWriter(Path.Combine(Directory.GetCurrentDirectory(), filename)))
+                var filePath = Path.Combine(Directory.GetCurrentDirectory(), filename);
+                using (var outputFile = new StreamWriter(filePath))
                 {
                     outputFile.Write(report.ToString());
                 }
