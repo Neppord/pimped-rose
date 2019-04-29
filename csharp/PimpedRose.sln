@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PimpedRose", "PimpedRose\PimpedRose.csproj", "{43C456CF-17B4-46D0-B7DE-5071D88087E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\TestProject.csproj", "{B1D9C94B-4550-486D-A3CC-C1282CF20DBA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{43C456CF-17B4-46D0-B7DE-5071D88087E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43C456CF-17B4-46D0-B7DE-5071D88087E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43C456CF-17B4-46D0-B7DE-5071D88087E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1D9C94B-4550-486D-A3CC-C1282CF20DBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1D9C94B-4550-486D-A3CC-C1282CF20DBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1D9C94B-4550-486D-A3CC-C1282CF20DBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1D9C94B-4550-486D-A3CC-C1282CF20DBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
